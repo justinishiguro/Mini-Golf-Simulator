@@ -1,3 +1,12 @@
+.title h1{
+    text-align: center;
+}
+
+.startButton{
+    display: block;
+    margin: 0 auto;
+}
+
 body {
     background: white;
   }
@@ -82,3 +91,10 @@ body {
 }
 /*Slider*/
 
+.quitButton{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+}
+  
