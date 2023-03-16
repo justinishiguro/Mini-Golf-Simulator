@@ -5,6 +5,32 @@
 .startButton{
     display: block;
     margin: 0 auto;
+    animation: breathing_effect 4s linear infinite;
+    font-family: ;
+
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.startButton a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+.startButton a:active, .startButton a:focus{
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+@keyframes breathing_effect {
+    0%{transform: scale(.8);}
+    25%{transform: scale(1);}
+    60%{transform: scale(.8);}
+    100%{transform: scale(1);}
 }
 
 body {
