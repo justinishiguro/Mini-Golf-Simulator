@@ -18,7 +18,9 @@ html, body, #start-screen {
     justify-content: center;
 }
 
-
+.title-start h1{
+    font-family: Pixel-Font;
+}
 
 .startButton{
     display: block;
@@ -106,7 +108,7 @@ body {
     font-size: 2em;
     margin: auto;
     margin-top: 10%;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     border-radius: 2.5em;
     text-align: center;
     background-color: rgb(255,255,255,0.8);
@@ -168,34 +170,14 @@ body {
 }
 .slider{
     width: 100%;
-    height: 20px;
+    height: 100%;
     margin: auto;
 }
 
-.slideContainer .slider {
-    appearance: show;
-    -webkit-appearance: none;
-    width: 100%;
-    height: 0.4em;
-    outline: none;
-    border-radius: 3px;
-    background: #1f1f1f;
-    box-shadow: 
-        3px 3px 6px #000,
-        inset 1px 1px 1px #909090;
+/* .slider ::-webkit-slider-runnable-track{
+    box-shadow: 0.1em 0.1em 0.4em #1f1f1f;
+} */
 
-}
-
-.slideContainer .slider::-webkit-slider-thumb {
-
-    width: 1.7em;
-    height: 1.7em;
-    cursor: pointer;
-    z-index: 3;
-    position: relative;
-}
-
-.slideContainer .slider-thu
 /*Slider*/
 
 .quit-button {
@@ -208,5 +190,11 @@ body {
     bottom: 0;
     right: 0;
     margin: 20px;
+    font-family: Pixel-Font;
+    border-radius: 0.4em;
+    box-shadow: 2em 2em 4em#1f1f1f;
 }
 
+.quitButton h1{
+    font-size: 1em;
+}
