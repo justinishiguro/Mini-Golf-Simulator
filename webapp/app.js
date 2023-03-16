@@ -19,6 +19,7 @@ add.addEventListener("click", function(){
         integer += 1;
     }
     int.innerHTML = integer;
+    // console.log(integer);
 })
 
 subtract.addEventListener("click", function(){
@@ -26,6 +27,7 @@ subtract.addEventListener("click", function(){
         integer -= 1;
     }
     int.innerHTML = integer;
+    // console.log(integer);
 })
 
 //Counter2
@@ -40,6 +42,7 @@ add2.addEventListener("click", function(){
         integer2 += 1;
     }
     int2.innerHTML = integer2;
+    // console.log(integer2);
 })
 
 subtract2.addEventListener("click", function(){
@@ -47,5 +50,6 @@ subtract2.addEventListener("click", function(){
     integer2 -= 1;
     }
     int2.innerHTML = integer2;
+    // console.log(integer2);
 })
 
