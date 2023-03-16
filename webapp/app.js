@@ -40,3 +40,4 @@ subtract2.addEventListener("click", function(){
     integer2 -= 1;
     int2.innerHTML = integer2;
 })
+

@@ -23,6 +23,8 @@ html, body, #start-screen {
     font-family: Pixel-Font;
 }
 
+
+
 .startButton{
     display: block;
     margin: 0 auto;
@@ -34,6 +36,7 @@ html, body, #start-screen {
     outline: none;
     cursor: pointer;
 }
+
 
 .startButton a ,.quitButton a{
     color: inherit;
@@ -55,8 +58,19 @@ html, body, #start-screen {
     100%{transform: scale(1);}
 }
 
+
+
+.animated {
+    animation-name: fade-away;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
 body {
     background-image: url(./images/966314.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 /*Counter 1*/
 #container{
@@ -128,15 +142,45 @@ body {
 
 /*Slider*/
 .slideContainer{
-    width: 100%;   
-    margin: auto
+    width: 80%;   
+    margin: auto;
+    display: flex;
+    flex-direction: row;
 }
 
+.slideContainer p{
+    font-family: Pixel-Font;
+    marigin-right: 10px;
+}
 .slider{
     width: 100%;
     height: 20px;
     margin: auto;
 }
+
+.slideContainer .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 0.4em;
+    outline: none;
+    border-radius: 3px;
+    background: #1f1f1f;
+    box-shadow: 
+        3px 3px 6px #000,
+        inset 1px 1px 1px #909090;
+
+}
+
+.slideContainer .slider::-webkit-slider-thumb {
+
+    width: 1.7em;
+    height: 1.7em;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+}
+
+.slideContainer .slider-thu
 /*Slider*/
 
 .quitButton{
