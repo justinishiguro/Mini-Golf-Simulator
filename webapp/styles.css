@@ -72,73 +72,68 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
   }
-/*Counter 1*/
+
+/*Title*/
+.title p{
+    font-family: Pixel-Font;
+    font-size: 2em;
+    padding-left: 50%;
+    margin-bottom: 0px;
+}
+
+/*Counter*/
+#container1, #container2{
+    height: 13em;
+    width: 30em;
+    border: 0.8em solid rgb(249, 249, 249);
+    margin: 50px auto;
+    background-color: grey;
+}
+
 #container{
-    height: 200px;
-    width: 500px;
-    border: 10px solid white;
-    margin: 50px auto;
-    background-color: grey;
+    display: flex;
+    flex-direction: row;
 }
 
-#number{
-    height: 25px;
-    width: 250px;
+#number, #number2{
+    height: 1em;
+    width: 5em;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 10%;
+    margin-bottom: 0em;
     border: 1px solid black;
     text-align: center;
     background-color: white;
+    visibility: hidden;
+    
 }
 
-#increment{
-    height: 25px;
-    width: 100px;
-    margin-top: 50px;
-    margin-left: 125px;
+#decrement1, #decrement2, #increment1, #increment2{
+    height: 2em;
+    width: 7em;
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    visibility: hidden;
 }
 
-#decrement{
-    height: 25px;
-    width: 100px;
-    margin-top: 50px;
-    margin-left: 50px;
+#decrement1{
+    background-image: url(./images/Blue-arrow-right.png);
 }
 /*Counter 1*/
 
 /*Counter 2*/
-#container2{
-    height: 200px;
-    width: 500px;
-    border: 10px solid white;
-    margin: 50px auto;
-    background-color: grey;
-}
-
-#number2{
-    height: 25px;
-    width: 250px;
-    margin: auto;
-    margin-top: 50px;
-    border: 1px solid black;
-    text-align: center;
-    background-color: white;
-}
-
-#increment2{
-    height: 25px;
-    width: 100px;
-    margin-top: 50px;
-    margin-left: 125px;
-}
-
-#decrement2{
-    height: 25px;
-    width: 100px;
-    margin-top: 50px;
-    margin-left: 50px;
-}
 /*Counter 2*/
+
+/*Arrows*/
+#arrows {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+/*Container*/
 
 /*Slider*/
 .slideContainer{
@@ -183,10 +178,15 @@ body {
 .slideContainer .slider-thu
 /*Slider*/
 
+.quit-button {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 .quitButton{
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: 0;
     margin: 20px;
 }
 

@@ -10,23 +10,31 @@
  </head>
 
     <body> 
-        <div class="slideContainer"> <!--SLIDER-->
-            <p>Value: <span id="value"></span></p>
-            <input type="range" min="0" max="200" value="1" id="myRange" class="slider">
-        </div> <!--SLIDER-->
 
-        <div id="container"> <!--COUNTER-->
+        <div class="title">
+            <p>Game Title</p>
+        </div>
+        <div id="container">
+        <div id="container1"> <!--COUNTER-->
             <div id="number">0</div>
-            <button id="increment">Add (+)</button>
-            <button id="decrement">Subtract (-)</button>
+                <div id="arrows">
+                <button id="increment1">Add (+)</button>
+                <button id="decrement1">Subtract (-)</button>
+                </div>
         </div> <!--COUNTER-->
 
         <div id="container2"> <!--COUNTER2-->
             <div id="number2">0</div>
-            <button id="increment2">Add (+)</button>
-            <button id="decrement2">Subtract (-)</button>
+                <div id="arrows">
+                <button id="increment2">Add (+)</button>
+                <button id="decrement2">Subtract (-)</button>
+                </div>
         </div> <!--COUNTER2-->
-
+        </div>
+        <div class="slideContainer"> <!--SLIDER-->
+            <p>Value: <span id="value"></span></p>
+            <input type="range" min="0" max="200" value="1" id="myRange" class="slider">
+        </div> <!--SLIDER-->
         <div id="quit-button">
             <button class="quitButton">
                 <h1><a href = "index.html"; title = "index"> Quit</a></h1>
