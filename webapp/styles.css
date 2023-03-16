@@ -1,12 +1,33 @@
+@font-face {
+    font-family: 'Pixel-Font';
+    src: url('COMMP___.TTF') format('truetype');
+}
+
+
+html, body, #start-screen {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .title h1{
     text-align: center;
+    font-family: Pixel-Font;
 }
 
 .startButton{
     display: block;
     margin: 0 auto;
     animation: breathing_effect 4s linear infinite;
-    font-family: ;
+    font-family: Pixel-Font;
 
     color: inherit;
     text-decoration: none;
@@ -14,13 +35,14 @@
     cursor: pointer;
 }
 
-.startButton a {
+.startButton a ,.quitButton a{
     color: inherit;
     text-decoration: none;
     outline: none;
 }
 
-.startButton a:active, .startButton a:focus{
+.startButton a:active, .startButton a:focus, .quitButton a:active
+.quitButton a:focus{
     color: inherit;
     text-decoration: none;
     outline: none;
@@ -34,7 +56,7 @@
 }
 
 body {
-    background: white;
+    background-image: url(./images/966314.jpg);
   }
 /*Counter 1*/
 #container{
@@ -123,4 +145,4 @@ body {
     left: 0;
     margin: 20px;
 }
-  
+
