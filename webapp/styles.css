@@ -83,17 +83,24 @@ body {
 
 /*Counter*/
 #container1, #container2{
-    height: 13em;
+    height: 100%;
     width: 30em;
-    border: 0.8em solid rgb(249, 249, 249);
     margin: 50px auto;
-    background-color: grey;
+    background-color: rgb(255,255,255,0.3);
 }
 
 #container{
     display: flex;
     flex-direction: row;
 }
+
+#container1 p, #container2 p {
+    font-family: Pixel-Font;
+    text-align: center;
+    font-size: 2em;
+}
+
+
 
 #number, #number2{
     height: 1em;
@@ -104,8 +111,7 @@ body {
     border: 1px solid black;
     text-align: center;
     background-color: white;
-    visibility: hidden;
-    
+    visibility: hidden;    
 }
 
 #decrement1, #decrement2, #increment1, #increment2{
@@ -114,7 +120,7 @@ body {
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: auto;
+    margin-bottom: 5em;
     background: none;
     /* visibility: hidden; */
 }
