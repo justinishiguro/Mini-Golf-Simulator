@@ -109,17 +109,29 @@ body {
 }
 
 #decrement1, #decrement2, #increment1, #increment2{
-    height: 2em;
-    width: 7em;
-    margin-top: 3em;
+    height: 10.2em;
+    width: 10em;
+    margin-top: auto;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
-    visibility: hidden;
+    background: none;
+    /* visibility: hidden; */
+}
+#increment1{
+    background-image: url(./images/Green-arrow-up.png);
 }
 
 #decrement1{
+    background-image: url(./images/Red-arrow-down.png);
+}
+
+#increment2{
     background-image: url(./images/Blue-arrow-right.png);
+}
+
+#decrement2{
+    background-image: url(./images/Yellow-arrow-left.png);
 }
 /*Counter 1*/
 
@@ -145,7 +157,7 @@ body {
 
 .slideContainer p{
     font-family: Pixel-Font;
-    marigin-right: 10px;
+    margin-right: 10px;
 }
 .slider{
     width: 100%;
@@ -154,6 +166,7 @@ body {
 }
 
 .slideContainer .slider {
+    appearance: show;
     -webkit-appearance: none;
     width: 100%;
     height: 0.4em;
