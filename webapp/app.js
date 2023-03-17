@@ -83,7 +83,14 @@ document.addEventListener("keydown", function(event) {
         }
         int2.innerHTML = integer2;
     }
-    else ;
+    else if(which_key == "r"){
+        integer = 0;
+        integer2 = 0;
+        int.innerHTML = 0;
+        int2.innerHTML = 0;
+    }
+    else;
+    console.log(which_key);
 });
 
 
