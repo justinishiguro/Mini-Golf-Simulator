@@ -53,3 +53,43 @@ subtract2.addEventListener("click", function(){
     // console.log(integer2);
 })
 
+let which_key = "NULL";
+document.addEventListener("keydown", function(event) {
+    which_key = event.key;
+    if(which_key == "ArrowLeft"){
+        if(integer2 <= 20 && integer2 > -20){
+            integer2 -= 1;
+            }
+        int2.innerHTML = integer2;
+    }
+
+    else if(which_key == "ArrowDown"){
+        if(integer <= 20 && integer > -20){
+            integer -= 1;
+        }
+        int.innerHTML = integer;
+    }
+    
+    else if(which_key == "ArrowUp"){
+        if(integer < 20 && integer >= -20){
+            integer += 1;
+        }
+        int.innerHTML = integer;
+    }
+
+    else if(which_key == "ArrowRight"){
+        if(integer2 < 20 && integer2 >= -20){
+            integer2 += 1;
+        }
+        int2.innerHTML = integer2;
+    }
+    else ;
+});
+
+
+document.addEventListener("keydown", function(event) {
+    if(event.key == "ArrowUp" || event.key == "ArrowDown" || event.key == "ArrowLeft" || event.key == "ArrowRight"){
+        event.preventDefault();
+    }
+})
+
