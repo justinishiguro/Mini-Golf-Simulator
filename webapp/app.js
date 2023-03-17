@@ -90,7 +90,6 @@ document.addEventListener("keydown", function(event) {
         int2.innerHTML = 0;
     }
     else;
-    console.log(which_key);
 });
 
 
@@ -100,3 +99,8 @@ document.addEventListener("keydown", function(event) {
     }
 })
 
+document.addEventListener("keydown", function(event){
+    if(event.key == 'q'){
+        window.location.href = "http://127.0.0.1:5500/index.html";
+    }
+})
