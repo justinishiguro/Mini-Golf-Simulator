@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Pixel-Font';
-    src: url('COMMP___.TTF') format('truetype');
+    src: url('../COMMP___.TTF') format('truetype');
 }
 
 
@@ -11,64 +11,14 @@ html, body, #start-screen {
     width: 100%;
 }
 
-#start-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.title-start h1{
-    font-family: Pixel-Font;
-}
-
-.startButton{
-    display: block;
-    margin: 0 auto;
-    animation: breathing_effect 4s linear infinite;
-    font-family: Pixel-Font;
-
-    color: inherit;
-    text-decoration: none;
-    outline: none;
-    cursor: pointer;
-}
-
-
-.startButton a ,.quitButton a{
-    color: inherit;
-    text-decoration: none;
-    outline: none;
-}
-
-.startButton a:active, .startButton a:focus, .quitButton a:active
-.quitButton a:focus{
-    color: inherit;
-    text-decoration: none;
-    outline: none;
-}
-
-@keyframes breathing_effect {
-    0%{transform: scale(.8);}
-    25%{transform: scale(1);}
-    60%{transform: scale(.8);}
-    100%{transform: scale(1);}
-}
-
-
-
-.animated {
-    animation-name: fade-away;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-  }
-
 body {
-    background-image: url(./images/966314.jpg);
+    background-image: url(../images/Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+
+
 
 /*Title*/
 .title p{
@@ -100,6 +50,19 @@ body {
     font-size: 2em;
 }
 
+.quitButton a{
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+.quitButton a:active
+.quitButton a:focus{
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
 
 
 #number, #number2{
@@ -128,19 +91,19 @@ body {
     /* visibility: hidden; */
 }
 #increment1{
-    background-image: url(./images/Green-arrow-up.png);
+    background-image: url(../images/Green-arrow-up.png);
 }
 
 #decrement1{
-    background-image: url(./images/Red-arrow-down.png);
+    background-image: url(../images/Red-arrow-down.png);
 }
 
 #increment2{
-    background-image: url(./images/Blue-arrow-right.png);
+    background-image: url(../images/Blue-arrow-right.png);
 }
 
 #decrement2{
-    background-image: url(./images/Yellow-arrow-left.png);
+    background-image: url(../images/Yellow-arrow-left.png);
 }
 /*Counter 1*/
 
