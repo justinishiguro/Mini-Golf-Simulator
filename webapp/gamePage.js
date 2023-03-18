@@ -101,6 +101,6 @@ document.addEventListener("keydown", function(event) {
 
 document.addEventListener("keydown", function(event){
     if(event.key == 'q'){
-        window.location.href = "http://127.0.0.1:5500/index.html";
+        window.location.href = "http://127.0.0.1:5500/webapp/startPage.html";
     }
 })
