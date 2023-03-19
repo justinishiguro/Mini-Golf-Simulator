@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Pixel-Font';
-    src: url('../COMMP___.TTF') format('truetype');
+    src: url('./COMMP___.TTF') format('truetype');
 }
 
 
@@ -54,7 +54,7 @@ html, body, #start-screen {
 }
 
 body {
-    background-image: url(../images/Background.jpg);
+    background-image: url(./images/Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }

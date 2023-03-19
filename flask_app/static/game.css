@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Pixel-Font';
-    src: url('../COMMP___.TTF') format('truetype');
+    src: url('./COMMP___.TTF') format('truetype');
 }
 
 
@@ -12,7 +12,7 @@ html, body, #start-screen {
 }
 
 body {
-    background-image: url(../images/Background.jpg);
+    background-image: url(./images/Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -91,19 +91,19 @@ body {
     /* visibility: hidden; */
 }
 #increment1{
-    background-image: url(../images/Green-arrow-up.png);
+    background-image: url(./images/Green-arrow-up.png);
 }
 
 #decrement1{
-    background-image: url(../images/Red-arrow-down.png);
+    background-image: url(./images/Red-arrow-down.png);
 }
 
 #increment2{
-    background-image: url(../images/Blue-arrow-right.png);
+    background-image: url(./images/Blue-arrow-right.png);
 }
 
 #decrement2{
-    background-image: url(../images/Yellow-arrow-left.png);
+    background-image: url(./images/Yellow-arrow-left.png);
 }
 /*Counter 1*/
 

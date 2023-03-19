@@ -8,7 +8,7 @@ console.log(window.location.pathname);
 
 document.addEventListener("keydown", function(event){
     if(event.key == 's'){
-        window.location.href = "http://127.0.0.1:5500/webapp/GAME_PAGE/gamePage.html"
+        window.location.href = "/game"
     }
     console.log(event.key);
 })
