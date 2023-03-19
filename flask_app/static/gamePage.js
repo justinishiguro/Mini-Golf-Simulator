@@ -29,15 +29,15 @@ subtract.addEventListener("click", function(){ // When the red arrow is clicked 
 })
 
 //Counter2
-let add2 = document.getElementById("increment2");
-let subtract2 = document.getElementById("decrement2");
+let add2 = document.getElementById("increment2"); //from the increment 1 button (blue arrow)
+let subtract2 = document.getElementById("decrement2"); //from the decrement 1 button (yellow arrow)
 
-let int2 = document.getElementById("number2");
+let int2 = document.getElementById("number2"); // number for the section that takes care of increment 2, decrement 2
 let integer2 = 0;
 
 
 
-add2.addEventListener("click", function(){
+add2.addEventListener("click", function(){ // When the blue arrow is clicked the integer variable increments if it's within the range -20 ~ 19
     if(integer2 < 20 && integer2 >= -20){
         integer2 += 1;
     }
@@ -45,7 +45,7 @@ add2.addEventListener("click", function(){
     // console.log(integer2);
 })
 
-subtract2.addEventListener("click", function(){
+subtract2.addEventListener("click", function(){ // When the yellow arrow is clicked the integer variable decrements if it's within the range -19 ~ 20
     if(integer2 <= 20 && integer2 > -20){
     integer2 -= 1;
     }
@@ -55,36 +55,36 @@ subtract2.addEventListener("click", function(){
 
 
 let which_key = "NULL";
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function(event) { 
     which_key = event.key;
-    if(which_key == "ArrowLeft"){
+    if(which_key == "ArrowLeft"){ // basically does the same functionality as the yellow arrow but with the 'left' direcetion key
         if(integer2 <= 20 && integer2 > -20){
             integer2 -= 1;
             }
         int2.innerHTML = integer2;
     }
 
-    else if(which_key == "ArrowDown"){
+    else if(which_key == "ArrowDown"){ // basically does the same functionality as the red arrow but with the 'down' direction key
         if(integer <= 20 && integer > -20){
             integer -= 1;
         }
         int.innerHTML = integer;
     }
 
-    else if(which_key == "ArrowUp"){
+    else if(which_key == "ArrowUp"){ // basically does the same functionality as the green arrow but with the 'up' direction key
         if(integer < 20 && integer >= -20){
             integer += 1;
         }
         int.innerHTML = integer;
     }
 
-    else if(which_key == "ArrowRight"){
+    else if(which_key == "ArrowRight"){ // basically does the same functionality as the blue arrow but with the 'right' direction key
         if(integer2 < 20 && integer2 >= -20){
             integer2 += 1;
         }
         int2.innerHTML = integer2;
     }
-    else if(which_key == "r"){
+    else if(which_key == "r"){ // it resets the values to '0' when the 'r' key is pressed
         integer = 0;
         integer2 = 0;
         int.innerHTML = 0;
@@ -94,13 +94,13 @@ document.addEventListener("keydown", function(event) {
 });
 
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function(event) { // 
     if(event.key == "ArrowUp" || event.key == "ArrowDown" || event.key == "ArrowLeft" || event.key == "ArrowRight"){
         event.preventDefault();
     }
 })
 
-document.addEventListener("keydown", function(event){
+document.addEventListener("keydown", function(event){ // if the keyboard button 'q' is presed it directs the user to the start page
     if(event.key == 'q'){
         window.location.href = "/start";
     }
