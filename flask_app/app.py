@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/start")
 def homepage():
-    return render_template("gamePage.html")
+    return render_template("startPage.html")
 
 @app.route("/")
 def homepage2():
