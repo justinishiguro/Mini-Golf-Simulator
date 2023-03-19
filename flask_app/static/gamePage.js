@@ -8,26 +8,24 @@ bar.oninput = function() {
 }
 
 //Counter
-let add = document.getElementById("increment1");
-let subtract = document.getElementById("decrement1");
+let add = document.getElementById("increment1"); //from the increment 1 button (green arrow)
+let subtract = document.getElementById("decrement1"); //from the decrement 1 button (red arrow)
 
-let int = document.getElementById("number");
+let int = document.getElementById("number"); // number for the section that takes care of increment 1, decrement 1
 let integer = 0;
 
-add.addEventListener("click", function(){
+add.addEventListener("click", function(){ // When the green arrow is clicked the integer variable increments if it's within the range -20 ~ 19
     if(integer < 20 && integer >= -20){
         integer += 1;
     }
     int.innerHTML = integer;
-    // console.log(integer);
 })
 
-subtract.addEventListener("click", function(){
+subtract.addEventListener("click", function(){ // When the red arrow is clicked the integer variable decrements if it's within the range -19 ~ 20
     if(integer <= 20 && integer > -20){
         integer -= 1;
     }
     int.innerHTML = integer;
-    // console.log(integer);
 })
 
 //Counter2

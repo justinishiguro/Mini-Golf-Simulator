@@ -1,11 +1,5 @@
 
 
-// if(window.location.pathname == "http://127.0.0.1:5500/webapp/gamePage.html"){
-
-console.log(window.location.pathname);
-
-// }
-
 document.addEventListener("keydown", function(event){
     if(event.key == 's'){
         window.location.href = "/game"
@@ -13,3 +7,4 @@ document.addEventListener("keydown", function(event){
     console.log(event.key);
 })
 
+// when the keyboard key 's' is pressed it directs the user from the game page to the start page
