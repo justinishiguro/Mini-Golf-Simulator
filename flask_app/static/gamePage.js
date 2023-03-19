@@ -37,6 +37,8 @@ let subtract2 = document.getElementById("decrement2");
 let int2 = document.getElementById("number2");
 let integer2 = 0;
 
+
+
 add2.addEventListener("click", function(){
     if(integer2 < 20 && integer2 >= -20){
         integer2 += 1;
@@ -52,6 +54,7 @@ subtract2.addEventListener("click", function(){
     int2.innerHTML = integer2;
     // console.log(integer2);
 })
+
 
 let which_key = "NULL";
 document.addEventListener("keydown", function(event) {
@@ -69,7 +72,7 @@ document.addEventListener("keydown", function(event) {
         }
         int.innerHTML = integer;
     }
-    
+
     else if(which_key == "ArrowUp"){
         if(integer < 20 && integer >= -20){
             integer += 1;
@@ -104,3 +107,43 @@ document.addEventListener("keydown", function(event){
         window.location.href = "/start";
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function sendGetRequest(variable, value) {
+  const data = { variableName: variable, value: value };
+  const url = 'http://192.168.1.100/data';
+
+  fetch(`${url}?${new URLSearchParams(data)}`, {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(response => {
+      console.log(`GET request sent successfully for ${variable} = ${value}`);
+    })
+    .catch(error => {
+      console.error(`Error sending GET request for ${variable} = ${value}:`, error);
+    });
+}
+
+
+
+
+
+
+
