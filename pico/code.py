@@ -96,3 +96,28 @@ while True:
     except Exception as e:
         print(e)
         continue
+
+
+
+import time
+import usb_cdc
+import json
+#usb_cdc.enable(console=True, data=True)
+
+if usb_cdc.data is None:
+    print("Need to enable USB CDC serial data in boot.py!")
+    while True:
+        pass
+
+
+def read_data():
+    usbl = usb_cdc.data.readline()
+    print( data)
+    return data
+
+usb_cdc.data.timeout = 5
+
+# while True:
+#     read_data()
+#     time.sleep(1)
+
