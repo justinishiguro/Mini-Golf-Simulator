@@ -7,6 +7,10 @@ bar.oninput = function() {
     valueOutput.innerHTML = this.value;
 }
 
+setInterval(() => {
+    console.log("sent a request and ardi has a small pp")
+}, 5000)
+
 //Counter
 let add = document.getElementById("increment1"); //from the increment 1 button (green arrow)
 let subtract = document.getElementById("decrement1"); //from the decrement 1 button (red arrow)
