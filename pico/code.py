@@ -36,8 +36,6 @@ def read_data():
     #data = {"raw": usbl.decode()}
     #data = usbl.decode()
 
-
-
 usb_cdc.data.timeout = 5
 
 while True:
