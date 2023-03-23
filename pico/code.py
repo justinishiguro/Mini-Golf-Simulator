@@ -25,6 +25,7 @@ def read_data():
         print(s)
         time.sleep(1)
         led.value = False
+        usb_cdc.data.write("Response Received")
 
 
     #print(input() + "posdfopsdf")
@@ -34,7 +35,6 @@ def read_data():
     #print( data)
     #data = {"raw": usbl.decode()}
     #data = usbl.decode()
-
 
 
 
