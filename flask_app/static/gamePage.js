@@ -111,21 +111,6 @@ document.addEventListener("keydown", function(event){ // if the keyboard button 
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function sendGetRequest(variable, value) {
   const data = { variableName: variable, value: value };
   const url = 'http://192.168.1.100/data';
@@ -144,6 +129,24 @@ function sendGetRequest(variable, value) {
 }
 
 
+function sendPostRequest(variable, value){
+	const dat = { variableName: variable, value: value };
+	const url = 'http://192.168.1.100/';
+
+	fetch(`${url}?${new URLSearchParams(data)}`,{
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body : JSON.stringify(data)
+	})
+	.then(response => response.json()
+	.then(data => console.log(data))
+	.catch(error => console.log(error));
+}
+	
+
+				
 
 
 
