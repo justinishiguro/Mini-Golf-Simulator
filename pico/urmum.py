@@ -1,11 +1,19 @@
 from flask import Flask, make_response
 import requests
+from flask_cors import CORS
+
+
+
 
 app = Flask(__name__)
 
+
+CORS(app)
+
+
 def generateMetrics():
     return "hello world"
-    
+
 
 @app.route('/')
 def hello_world():

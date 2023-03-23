@@ -16,7 +16,7 @@ def main():
     global ser
     while 1:
         #misc code here
-        sendData("B")
+        sendData("A")
         time.sleep(0.4)
         print(1)
 
