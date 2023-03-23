@@ -34,6 +34,13 @@ def hello_world():
     return jsonify(response)
 
 
+@app.route('/receive', methods = ['POST']) #receiving post request
+def receivepost():
+    data = request.get_json()
+
+    return "DATA PROCESSED"
+
+
 
 
 
