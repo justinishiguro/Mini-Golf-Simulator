@@ -19,6 +19,9 @@ def  displayText():
     return "hello world"
 
 
+
+
+#sends datat to the server
 @app.route('/')
 def hello_world():
     response = make_response(displayText(), 200)
@@ -34,19 +37,14 @@ def hello_world():
     return jsonify(response)
 
 
-
-
-
 ser = serial.Serial('/dev/cu.usbmodem101') # open serial port
 
 
 
-
+#send data through the serial connection
 def sendData(data):
     send = data + " \r\n"
     ser.write(send.encode('utf8'))
-
-
 
 
 
