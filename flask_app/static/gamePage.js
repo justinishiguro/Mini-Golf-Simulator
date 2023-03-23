@@ -7,9 +7,29 @@ bar.oninput = function() {
     valueOutput.innerHTML = this.value;
 }
 
+// setInterval(() => {
+//     let isWin = false
+//     fetch("http://localhost:3000")
+//         .then((res) => {
+//             if (res.isWin) {
+//                 let win-window = document.getElementById("win-window")
+//                 win-window.style.hidden = false
+
+
+//             }
+
+//         })})
+// }, 5000)
+
+
 setInterval(() => {
-    console.log("sent a request and ardi has a small pp")
+    fetch("http://localhost:3000")
+        .then((res) => {
+            return res.json()
+        })
+        .then((res2) => console.log(res2))
 }, 5000)
+
 
 //Counter
 let add = document.getElementById("increment1"); //from the increment 1 button (green arrow)
@@ -54,12 +74,13 @@ subtract2.addEventListener("click", function(){ // When the yellow arrow is clic
     integer2 -= 1;
     }
     int2.innerHTML = integer2;
+    // make POST request with
     // console.log(integer2);
 })
 
 
 let which_key = "NULL";
-document.addEventListener("keydown", function(event) { 
+document.addEventListener("keydown", function(event) {
     which_key = event.key;
     if(which_key == "ArrowLeft"){ // basically does the same functionality as the yellow arrow but with the 'left' direcetion key
         if(integer2 <= 20 && integer2 > -20){
@@ -98,7 +119,7 @@ document.addEventListener("keydown", function(event) {
 });
 
 
-document.addEventListener("keydown", function(event) { // 
+document.addEventListener("keydown", function(event) { //
     if(event.key == "ArrowUp" || event.key == "ArrowDown" || event.key == "ArrowLeft" || event.key == "ArrowRight"){
         event.preventDefault();
     }
