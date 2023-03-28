@@ -21,7 +21,7 @@ ser = serial.Serial('/dev/cu.usbmodem101') # open serial port
 #send data through the serial connection
 def sendData(data):
     send = data + "\r"
-    ser.write(send.encode('utf8'))        
+    ser.write(send.encode('utf8'))
 
 
 
