@@ -1,7 +1,3 @@
-from os import read
-import time
-import usb_cdc
-import json
 import time, sys, supervisor
 import board
 import digitalio
@@ -9,6 +5,7 @@ import re
 import busio
 from adafruit_motor import servo
 import pwmio
+import usb_cdc
 
 
 elbow = servo.Servo(pwmio.PWMOut(board.GP15, duty_cycle = 2 ** 15 , frequency=50))
@@ -56,12 +53,25 @@ def read_example():
     elbow.angle = (int(j))*4
 
 
-   #print(re.findall(r'\d+',s))
-
+def read_power(power):
+    j= ''
+    for x in s:
+        if x.isdigit():
+            j+=x
+    if int(j) < 117:
+        elbow.angle = (int(j))*4
+    print(elbow.angle)
 
 
 def read_height(height):
-    print(height)
+    j= ''
+    for x in s:
+        if x.isdigit():
+            j+=x
+    if int(j) < 117:
+        elbow.angle = (int(j))*4
+    print(elbow.angle)
+
 
 
 def read_rotation(rotation):
@@ -76,7 +86,7 @@ def read_throttle(throttle):
 
 #Keeps track of the users score and how many holes they have gotten in
 def scoreTracker():
-    s = sys.stdin.readline()  # actually read it in
+    i = 0
     #writes back to the terminal
 
 
@@ -110,7 +120,6 @@ while True:
         read_height(s)
 
 
-    if "Rotation" in s:
-        read_rotation(s)
 
-    time.sleep(0.1)
+    time.sleep(0.05)
+
