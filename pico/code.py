@@ -8,12 +8,12 @@ import pwmio
 import usb_cdc
 
 
-elbow = servo.Servo(pwmio.PWMOut(board.GP15, duty_cycle = 2 ** 15 , frequency=50))
+elbow = servo.Servo(pwmio.PWMOut(board.GP18, duty_cycle = 2 ** 15 , frequency=50))
 
-base = servo.Servo(pwmio.PWMOut(board.GP14, duty_cycle = 2 ** 15 , frequency=50))
+base = servo.Servo(pwmio.PWMOut(board.GP17, duty_cycle = 2 ** 15 , frequency=50))
 
 
-club = servo.Servo(pwmio.PWMOut(board.GP12, duty_cycle = 2 ** 15 , frequency=50))
+club = servo.Servo(pwmio.PWMOut(board.GP19, duty_cycle = 2 ** 15 , frequency=50))
 
 
 pwm = pwmio.PWMOut(board.GP16, frequency=50)
@@ -50,7 +50,7 @@ def read_example():
     for x in s:
         if x.isdigit():
             j+=x
-    elbow.angle = (int(j))*4
+    club.angle = (int(j))*4
 
 
 def read_power(power):
@@ -58,9 +58,9 @@ def read_power(power):
     for x in s:
         if x.isdigit():
             j+=x
-    if int(j) < 117:
-        elbow.angle = (int(j))*4
-    print(elbow.angle)
+
+    club.angle = (int(j))
+    print(club.angle)
 
 
 def read_height(height):
@@ -68,19 +68,32 @@ def read_height(height):
     for x in s:
         if x.isdigit():
             j+=x
-    if int(j) < 117:
+
+    if int(j) < 34 and int(j) > 18:
         elbow.angle = (int(j))*4
-    print(elbow.angle)
 
 
+    base.angle = 15
+
+
+
+rot= 20
 
 def read_rotation(rotation):
-    print(rotation)
+
+    y = 0.15
+
+
+    if "Right" in s:
+        y = y *(-1)
 
 
 
-def read_throttle(throttle):
-    print(throttle)
+
+
+    rotator.throttle = y
+    time.sleep(0.2)
+    rotator.throttle = 0
 
 
 
@@ -119,7 +132,23 @@ while True:
     if "Height" in s:
         read_height(s)
 
+    if "Hit-value" in s:
+        read_power(s)
+
+    if "Rotation" in s:
+        read_rotation(s)
+
+    if "True" in s:
+        club.angle = 0
+        print(club.angle)
+
+
+
+
+
+
 
 
     time.sleep(0.05)
+
 

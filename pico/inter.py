@@ -30,27 +30,23 @@ def readData():
     k = s.decode('utf8')
     return " ".join(k.split())
 
-##sends data to the server from pico
-#@app.route('/')
-#def hello_world():
-#    response = make_response(displayText(), 200)
-#    response.mimetype = "text/plain"
-#    response = {"test": readData()}
-#    print(readData())
-#    global ser
-#    #misc code heres
-#    time.sleep(0.1)
-
-#    return jsonify(response)
+#sends data to the server from pico
+@app.route('/')
+def hello_world():
+    response = make_response(displayText(), 200)
+    response.mimetype = "text/plain"
+    print(readData())
+    response = {"test": readData()}
+    global ser
+    #misc code heres
+    time.sleep(0.1)
+    return jsonify(response)
 
 ##Gets post request made by the server
 @app.route('/', methods = ['POST'])
 def receivepost():
     data = request.get_json()
-
-
     sendData(json.dumps(data))
-
     return data
 
 
