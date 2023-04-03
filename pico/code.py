@@ -52,6 +52,7 @@ def read_example():
             j+=x
     club.angle = (int(j))*4
 
+power = 0
 
 def read_power(power):
     j= ''
@@ -60,6 +61,7 @@ def read_power(power):
             j+=x
 
     club.angle = (int(j))
+    power = club.angle
     print(club.angle)
 
 
@@ -70,7 +72,8 @@ def read_height(height):
             j+=x
 
     if int(j) < 34 and int(j) > 18:
-        elbow.angle = (int(j))*4
+        elbow.angle = 220 - (int(j))*4
+    print(elbow.angle)
 
 
     base.angle = 15
@@ -135,11 +138,16 @@ while True:
     if "Hit-value" in s:
         read_power(s)
 
+
+    if "Reach" in s:
+
     if "Rotation" in s:
         read_rotation(s)
 
     if "True" in s:
         club.angle = 0
+        time.sleep(0.3)
+        club.angle = power
         print(club.angle)
 
 

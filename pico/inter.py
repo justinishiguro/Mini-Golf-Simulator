@@ -5,7 +5,8 @@ import json
 import serial
 import time
 import re
-
+import threading
+from multiprocessing import Process
 # sends json requests to the server/VM from own computer internet port
 app = Flask(__name__)
 CORS(app)
@@ -24,23 +25,50 @@ def sendData(data):
     ser.write(send.encode('utf8'))
 
 
+def parallelize_functions(*functions):
+    processes = []
+    for function in functions:
+        p = Process(target=function)
+        p.start()
+        processes.append(p)
+    for p in processes:
+        p.join()
 
-def readData():
-    s = ser.readline()
-    k = s.decode('utf8')
-    return " ".join(k.split())
+class ReadLine:
+    def __init__(self, s):
+        self.buf = bytearray()
+        self.s = s
 
-#sends data to the server from pico
-@app.route('/')
-def hello_world():
-    response = make_response(displayText(), 200)
-    response.mimetype = "text/plain"
-    print(readData())
-    response = {"test": readData()}
-    global ser
-    #misc code heres
-    time.sleep(0.1)
-    return jsonify(response)
+    def readline(self):
+        i = self.buf.find(b"\n")
+        if i >= 0:
+            r = self.buf[:i+1]
+            self.buf = self.buf[i+1:]
+            return r
+        while True:
+            i = max(1, min(2048, self.s.in_waiting))
+            data = self.s.read(i)
+            i = data.find(b"\n")
+            if i >= 0:
+                r = self.buf + data[:i+1]
+                self.buf[0:] = data[i+1:]
+                return r
+            else:
+                self.buf.extend(data)
+
+rl = ReadLine(ser)
+
+
+def picoData():
+    while True:
+        print(rl.readline())
+        send = rl.readline().decode('utf8')
+        print(send)
+        if "One\r\n" in send:
+            print("sent")
+            send_post_request("One")
+
+
 
 ##Gets post request made by the server
 @app.route('/', methods = ['POST'])
@@ -52,5 +80,26 @@ def receivepost():
 
 
 
+
+
+def send_post_request(data):
+    url = 'http://cpen291-2.ece.ubc.ca/hole1' # replace with the URL of the endpoint you want to send the request to
+    headers = {'Content-Type': 'application/json'}
+    response = requests.post(url, headers=headers, data=json.dumps(data))
+    print(response)
+    if response.status_code == 200:
+        print("POST request sent successfully!")
+    else:
+        print("Error sending POST request: ", response.status_code)
+
+
+
+
+
+
+def run_app():
+    app.run(port=3000, debug=False)
+
 if __name__ == '__main__':
-    app.run(port=3000)
+    parallelize_functions(picoData, run_app)
+
