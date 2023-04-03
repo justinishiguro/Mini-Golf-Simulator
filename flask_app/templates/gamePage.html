@@ -9,10 +9,19 @@
     <link rel="stylesheet" href="../static/game.css">
  </head>
 
-    <body> 
-
+    <body>
+        <div class = "title-container">
         <div class="title">
-            <p>Ardi has a small dick</p>
+            <p>Mini Golf Simulator</p>
+            <div class = "ball-images">
+                <div id ="ball1"></div>
+                <div id ="ball2"></div>
+                <div id ="ball3"></div>
+                <div id ="ball4"></div>
+                <div id ="ball5"></div>
+                <div id ="ball6"></div>
+            </div>
+        </div>
         </div>
         <div id="container">
         <div id="container1"> <!--COUNTER-->
@@ -23,29 +32,47 @@
                 </div>
             <div id="number">0</div>
         </div> <!--COUNTER-->
-
+	<div id = "container3">
+		<p>REACH</p>
+		<div id = "arrows">
+		<button id = "forward"></button>
+		<button id = "backward"></button>
+		</div>
+		<div id = "number3">0</div>
+	</div>
         <div id="container2"> <!--COUNTER2-->
                 <p>LEFT-RIGHT</p>
                 <div id="arrows">
                 <button id="decrement2"></button>
                 <button id="increment2"></button>
                 </div>
-            <div id="number2">0</div>
+            <div id="number2"></div>
         </div> <!--COUNTER2-->
         </div>
         <div class="slideContainer"> <!--SLIDER-->
             <p>Value: <span id="value"></span></p>
-            <input type="range" min="0" max="200" value="1" id="myRange" class="slider">
-            <div class="progress"></div>
+            <input type="range" min="0" max="180" value="1" id="myRange" class="slider">
+            <div id = "hit-button">
+	    	<button class = "hitButton">
+			<h1>HIT</h1>
+		</button>
+	    </div>
             <p>Press r to reset</p>
         </div> <!--SLIDER-->
+
+	<p id = "timer">1:30</p>
+	<div class = "progress-bar">
+		<div class = "progress2">
+		</div>
+	</div>
         <div id="quit-button">
             <button class="quitButton">
-                <h1><a href = "../START_PAGE/startPage.html"; title = "index"> Quit</a></h1>
+                <h1><a href = "/start"; title = "startPage"> Quit</a></h1>
             </button>
         </div>
-        
-    </body> 
 
-    <script src="../static/gamePage.js"></script>
+
+    </body>
+
+    <script type="module" src="../static/gamePage.js"></script>
 </html>
