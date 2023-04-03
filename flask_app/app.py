@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-
+import json
 
 app = Flask(__name__)
 
@@ -20,17 +20,30 @@ def homepage2():
 def gamepage():
     return render_template("gamePage.html")
 
+@app.route("/end")
+def endpage():
+    return render_template("endPage.html")
 
-@app.route('/', methods=['GET'])
+
+
+# @app.route("/hole", methods=['POST'])
+# def hole():
+#     data = request.get_json()
+#     print(data)
+#     return jsonify(data)
+
+
+@app.route('/hole1', methods=['POST'])
 def handle_request():
-    data = request.get_json()
-    # Process the data as needed
-    response_data = {'message': 'Received request', 'data': data}
-    return jsonify(response_data)
+    data = request.data.decode('utf-8')  # decode the data from bytes to string
+    print(data)  # print the data string to console
+    return jsonify(data)
+# response_data = {'data': data}
+    # print(response_data)
+    # return jsonify(response_data)
 
 
 if __name__ == "__main__":
-    app.run(host = "5000", debug=True)
-    print(handle_request())
+    app.run(host = "0.0.0.0", debug=True)
 
 
