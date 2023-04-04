@@ -15,7 +15,7 @@ CORS(app)
 def  displayText():
     return "hello world"
 
-#serial port for Ardi's Macbook Pro
+#Serial port to receive and send Data (address given is for Macbook)
 ser = serial.Serial('/dev/cu.usbmodem101') # open serial port
 
 
