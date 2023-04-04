@@ -61,13 +61,22 @@ rl = ReadLine(ser)
 
 def picoData():
     while True:
-        print(rl.readline())
         send = rl.readline().decode('utf8')
         print(send)
         if "One\r\n" in send:
-            print("sent")
-            send_post_request("One")
+            send_post_request("One True")
+        if "Two\r\n" in send:
+            send_post_request("Two True")
+        if "Three\r\n" in send:
+            send_post_request("Three True")
+        if "Four\r\n" in send:
+            send_post_request("Four True")
+        if "Five\r\n" in send:
+            send_post_request("Five True")
+        if "Six\r\n" in send:
+            send_post_request("Six True")
 
+        time.sleep(0.01)
 
 
 ##Gets post request made by the server
@@ -85,6 +94,7 @@ def receivepost():
 def send_post_request(data):
     url = 'http://cpen291-2.ece.ubc.ca/hole1' # replace with the URL of the endpoint you want to send the request to
     headers = {'Content-Type': 'application/json'}
+    print(data)
     response = requests.post(url, headers=headers, data=json.dumps(data))
     print(response)
     if response.status_code == 200:
