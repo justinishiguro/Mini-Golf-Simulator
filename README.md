@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://www.youtube.com/embed/xMsV1JsLHl0?si=TGe2Msowsx5NmyLj">
-    <img src="" alt="CPEN 291 Mini-Golf Simulator" style="width: 480px; height: auto;">
+    <img src="https://www.youtube.com/embed/xMsV1JsLHl0?si=TGe2Msowsx5NmyLj.jpg" alt="CPEN 291 Mini-Golf Simulator" style="width: 480px; height: auto;">
   </a>
 </div>
 
