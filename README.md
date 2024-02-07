@@ -4,7 +4,7 @@
   <a href="http://www.youtube.com/watch?v=xMsV1JsLHl0">
     <img src="http://img.youtube.com/vi/xMsV1JsLHl0/hqdefault.jpg" alt="YouTube Video Thumbnail">
   </a>
-  <p>Please watch here.</p>
+  <p>Please watch a demonstration of the project here!</p>
 </div>
 
 ## Overview
