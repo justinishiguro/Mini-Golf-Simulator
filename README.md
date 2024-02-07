@@ -1,5 +1,7 @@
 # Mini-Golf Real Life Simulator Game
 
+[![Rick Astley - Never Gonna Give You Up](http://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](http://www.youtube.com/watch?v=dQw4w9WgXcQ "Rick Astley - Never Gonna Give You Up")
+
 ## Overview
 This project was part of my design studio class, CPEN 291. It consists of a web-based application controlling a robotic arm to play mini-golf in a real-world setting, offering an immersive IoT gaming experience.
 
@@ -19,5 +21,3 @@ This project was part of my design studio class, CPEN 291. It consists of a web-
 ### Frontend Design
 - Interactive web design with HTML/CSS/JS.
 - Features game controls, live score updates, and game state management through AJAX get() and post() calls for a dynamic user experience.
-
-[![Watch the video](https://img.youtube.com/vi/nTQUwghvy5Q/default.jpg)](https://youtu.be/nTQUwghvy5Q)
