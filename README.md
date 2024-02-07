@@ -1,8 +1,8 @@
 # Mini-Golf Real Life Simulator Game
 
 <div align="center">
-  <a href="https://www.youtube.com/embed/xMsV1JsLHl0?si=TGe2Msowsx5NmyLj">
-    <img src="https://www.youtube.com/embed/xMsV1JsLHl0?si=TGe2Msowsx5NmyLj.jpg" alt="CPEN 291 Mini-Golf Simulator" style="width: 480px; height: auto;">
+  <a href="http://www.youtube.com/watch?v=xMsV1JsLHl0">
+    <img src="http://img.youtube.com/vi/xMsV1JsLHl0/hqdefault.jpg" alt="YouTube Video Thumbnail">
   </a>
 </div>
 
