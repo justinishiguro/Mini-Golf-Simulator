@@ -1,8 +1,8 @@
 # Mini-Golf Real Life Simulator Game
 
 <div align="center">
-  <a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ">
-    <img src="http://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" alt="Rick Astley - Never Gonna Give You Up" style="width: 480px; height: auto;">
+  <a href="https://www.youtube.com/embed/xMsV1JsLHl0?si=TGe2Msowsx5NmyLj">
+    <img src="" alt="CPEN 291 Mini-Golf Simulator" style="width: 480px; height: auto;">
   </a>
 </div>
 
